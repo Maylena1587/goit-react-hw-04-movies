@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Switch, BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { Switch, HashRouter, Route, Redirect } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -24,8 +24,8 @@ const queryClient = new QueryClient();
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+    <HashRouter>
+      <QueryClientProvider client={queryClient}>
         <Container>
           <Header />
 
@@ -49,8 +49,8 @@ export default function App() {
 
           <ToastContainer autoClose={3000} />
         </Container>
-      </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </HashRouter>
   );
 }

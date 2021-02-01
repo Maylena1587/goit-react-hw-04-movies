@@ -1,11 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import {
-  Redirect,
-  BrowserRouter,
-  Route,
-  useParams,
-  useRouteMatch,
-} from 'react-router-dom';
+import { Redirect, Route, useParams, useRouteMatch } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import moviesAPI from '../services/movies-api';
@@ -50,7 +44,7 @@ export default function MovieDetailsView() {
   );
 
   return (
-    <BrowserRouter>
+    <>
       {!isValidRoute && <Redirect to="/" />}
       <div style={{ width: '100%' }}>
         <Button route={location.state} />
@@ -66,6 +60,6 @@ export default function MovieDetailsView() {
           {data && <MovieReviews id={data.id} />}
         </Route>
       </Suspense>
-    </BrowserRouter>
+    </>
   );
 }

@@ -1,0 +1,18 @@
+.btn {
+  height: 47px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgba(158, 25, 102, 0.705);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn:hover,
+.btn:focus {
+  opacity: 0.8;
+}

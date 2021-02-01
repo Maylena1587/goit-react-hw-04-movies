@@ -7,7 +7,7 @@ function Loader() {
       css={css`
         margin-top: 80px;
       `}
-      size={80}
+      size={20}
       color={'red'}
       loading={true}
     />
