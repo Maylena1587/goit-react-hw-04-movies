@@ -4,19 +4,19 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import Container from './Components/Container';
-import Header from './Components/Header';
-import Loader from './Components/Loader';
+import Container from '../Container';
+import Header from '../Header';
+import Loader from '../Loader';
 
 const HomeView = lazy(() =>
-  import('./views/HomeView' /* webpackChunkName: "home-view" */),
+  import('../../views/HomeView' /* webpackChunkName: "home-view" */),
 );
 const SearchMoviesView = lazy(() =>
-  import('./views/MoviesView' /* webpackChunkName: "movies-search-view" */),
+  import('../../views/MoviesView' /* webpackChunkName: "movies-search-view" */),
 );
 const MovieDetailsView = lazy(() =>
   import(
-    './views/MovieDetailsView' /* webpackChunkName: "movie-details-view" */
+    '../../views/MovieDetailsView' /* webpackChunkName: "movie-details-view" */
   ),
 );
 
